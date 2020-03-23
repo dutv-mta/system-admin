@@ -1,0 +1,12 @@
+[Unit]
+Description=Face Crm Storage
+After=syslog.target
+
+[Service]
+User=dsv
+LimitNOFILE=49152
+ExecStart=/data/app/face-crm-storage-java/face-crm-storage-v0.1.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
